@@ -1,0 +1,57 @@
+* {
+  /* outline: 1px solid rgba(255, 0, 0, 0.5); */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.header .h_wrap {
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .gnb>ul {
+  display: flex;
+  gap: 40px;
+}
+
+.header .gnb .sub {
+  display: none;
+}
+
+.header .h_right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.header .h_right .btn_ham {
+  display: none;
+}
+.header .h_right .btn_lang .ko {
+  display: none;
+}
+
+.header .h_right .heart {
+  position: relative;
+}
+
+.header .h_right .heart span {
+  font-size: 30px;
+}
+
+.header .h_right .heart>strong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 14px;
+}
