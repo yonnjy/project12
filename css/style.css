@@ -1,10 +1,17 @@
 .header {
   position: fixed;
-  top: 0;
+  top: -85rem;
   left: 0;
   right: 0;
+  background: #fff;
   border-bottom: 1px solid #eee;
   z-index: 999;
+  transition: 0.8s;
+  opacity: 0;
+}
+.header.on {
+  top: 0;
+  opacity: 1;
 }
 
 .header .h_wrap {
@@ -66,7 +73,6 @@
 
 .main_vi .itm {
   position: relative;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -76,7 +82,7 @@
 }
 
 .main_vi .itm02 {
-  background: url(../images/main_vi02.jpg) no-repeat center top/cover;
+  background: url(../images/main_vi02.jpg) no-repeat center center/cover;
   background-size: 110%;
 }
 
@@ -87,7 +93,7 @@
 
 .main_vi .slogan {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(0, -50%);
   margin: 0 0 0 -585rem;
@@ -95,18 +101,18 @@
 
 .main_vi .slogan>strong {
   display: inline-block;
-  background: #6EBA34;
-  color: #fff;
-  padding: 10rem 40rem;
-  font-size: 20rem;
+  /* background: #6EBA34; */
+  padding: 10rem 20rem;
+  border: 1px solid #888;
+  font-weight: 200;
   margin: 0 0 16rem 0;
 }
 
 .main_vi .slogan h2 {
-  width: 400rem;
+  width: 500rem;
   font-size: 56rem;
-  font-weight: 100;
-  line-height: 65rem;
+  font-weight: 200;
+  line-height: 70rem;
 }
 
 /* arrow, count */
@@ -171,7 +177,7 @@
 }
 
 /* 빙글빙글 텍스트 */
-.main_vi .btn_right {
+.main_vi .circle_wrap {
   position: absolute;
   left: 50%;
   transform: translate(-100%, 0);
@@ -179,7 +185,7 @@
   bottom: 40rem;
 }
 
-.main_vi .btn_right>a span {
+.main_vi .circle_wrap>a>span {
   position: absolute;
   right: 50%;
   bottom: 50%;
@@ -195,11 +201,11 @@
   transition: 1s;
 }
 
-.main_vi .btn_right:hover>a span {
+.main_vi .circle_wrap:hover>a>span {
   background: rgba(255, 255, 255, 1);
 }
 
-.main_vi .circle {
+.main_vi .circle_wrap .circle {
   display: flex;
   position: relative;
   width: 200rem;
@@ -208,7 +214,7 @@
   border-radius: 50%;
 }
 
-.main_vi .text {
+.main_vi .circle_wrap .text {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -226,12 +232,17 @@
   }
 }
 
-.main_vi .text span {
+.main_vi .circle_wrap .text span {
   position: absolute;
   left: 50%;
   top: 2px;
   font-size: 14rem;
   font-weight: 200;
-  transform-origin: 0 97rem;
+  transform-origin: 0 96rem;
   user-select: none;
+}
+
+.main_coll .bigbg {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(221, 221, 221, 0.1) 50%, rgb(255, 241, 210) 50%);
 }
