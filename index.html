@@ -17,11 +17,11 @@
     <!-- <script src="./js/jquery.easings.min.js"></script> -->
     <script src="./js/scrolloverflow.js"></script>
     <script src="./js/scrolloverflow.min.js"></script>
-    <script src="./js/custom.js"></script>
+    <script src="./js/custom.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header on">
         <div class="inner h_wrap">
             <h1>
                 <a href="#main_vi">
@@ -84,7 +84,6 @@
             </div>
         </div>
     </header>
-
     <main class="main_content">
         <!-- main_visual -->
         <section class="section main_vi">
@@ -96,6 +95,16 @@
                             서울벽지는 건강하고 아름다운 주거공간을 만들기 위해 노력 합니다
                         </h2>
                     </div>
+                    <div class="circle_wrap">
+                        <div class="circle">
+                            <div class="text">
+                                <p>SEOUL WALLPAPER SEOUL WALLPAPER SEOUL WALLPAPER</p>
+                            </div>
+                        </div>
+                        <a href="">
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="itm itm02">
                     <div class="slogan">
@@ -106,6 +115,16 @@
                             아이비와
                             함께 하세요.
                         </h2>
+                    </div>
+                    <div class="circle_wrap">
+                        <div class="circle">
+                            <div class="text">
+                                <p>SEOUL WALLPAPER SEOUL WALLPAPER SEOUL WALLPAPER</p>
+                            </div>
+                        </div>
+                        <a href="">
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
                     </div>
                 </div>
                 <div class="itm itm03">
@@ -119,7 +138,18 @@
                             제공 합니다.
                         </h2>
                     </div>
+                    <div class="circle_wrap">
+                        <div class="circle">
+                            <div class="text">
+                                <p>SEOUL WALLPAPER SEOUL WALLPAPER SEOUL WALLPAPER</p>
+                            </div>
+                        </div>
+                        <a href="">
+                            <span class="material-symbols-outlined">arrow_right_alt</span>
+                        </a>
+                    </div>
                 </div>
+
             </div>
             <div class="btn_left">
                 <div class="arrows">
@@ -130,33 +160,69 @@
                     <span>01</span> / <strong>03</strong>
                 </div>
             </div>
-            <div class="btn_right">
-                <div class="circle">
-                    <div class="text">
-                        <p>SEOUL WALLPAPER SEOUL WALLPAPER SEOUL WALLPAPER</p>
-                    </div>
-                </div>
-                <a href="">
-                    <span class="material-symbols-outlined">arrow_right_alt</span>
-                </a>
-            </div>
         </section>
         <!-- main_collection -->
-        <section class="section main_coll">02</section>
+        <section class="section main_coll">
+
+            <div class="collnav">
+                <div class="aaa">
+                    <span></span>
+                    <strong></strong>
+                </div>
+                <div class="nav222">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="ccc">
+                    <span></span>
+                    <strong></strong>
+                </div>
+            </div>
+            
+            <div class="slicktap">
+                <ul class="bigbg">
+                    <li><img src="" alt=""></li>
+                </ul>
+                <div class="inner">
+                    <div class="bgbg">
+                        <div class="con01">
+                            <div class="coll_tit">
+                                <h2></h2>
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                            <div class="coll_txt">
+                                <strong></strong>
+                                <p></p>
+                            </div>
+                            <div class="btn_coll">
+                                <a href="">
+                                    <strong></strong>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <span class="material-symbols-outlined left">arrow_left_alt</span>
+                        <span class="material-symbols-outlined right">arrow_right_alt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- main_view, search -->
         <section class="section main_view">03</section>
         <footer class="footer section fp-auto-height">000</footer>
     </main>
 
-    <script>
-        // 빙글빙글 텍스트
-        const text = document.querySelector('.text p');
-        text.innerHTML = text.innerText.split('').map(
-            (char, i) =>
-                `<span style="transform:rotate(${i * 7.4}deg)">${char}</span>`
-        ).join('');
-    </script>
-
 </body>
+<script>
+    const text = document.querySelector('.text p');
+    text.innerHTML = text.innerText.split('').map(
+        (char, i) =>
+            `<span style="transform:rotate(${i * 7.4}deg)">${char}</span>`
+    ).join('');
+</script>
 
 </html>
