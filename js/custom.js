@@ -23,12 +23,37 @@ $(function () {
             // console.log(idx, nidx, dir);
 
             if (dir == 'up') {
-                $('.header').addClass('on')
+                $('.header').addClass('on');
             } else {
-                $('.header').removeClass('on')
+                $('.header').removeClass('on');
             }
 
         }
+    });
+
+    $('.main_slide').slick({
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 800,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    });
+
+    $('.main_slide').on('init afterChange', function (e, s, c) {
+        const current = $('.main_slide .slick-current');
+
+        current.addClass('on').siblings().removeClass('on');
+        $('.main_vi .slide_num span').text("0" + (c ? (c + 1) : 1));
+        $('.main_vi .slide_num strong').text("0" + (s.slideCount));
+    });
+
+    $('.main_vi .arrows .left').on('click', function () {
+        $('.main_slide').slick('slickPrev');
+    });
+
+    $('.main_vi .arrows .right').on('click', function () {
+        $('.main_slide').slick('slickNext');
     });
 
 });
