@@ -1,7 +1,3 @@
-* {
-  /* outline: 1px solid rgba(255, 0, 0, 0.5); */
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -12,7 +8,7 @@
 }
 
 .header .h_wrap {
-  height: 80px;
+  height: 80rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -20,11 +16,11 @@
 
 .header .gnb>ul {
   display: flex;
-  gap: 40px;
+  gap: 40rem;
 }
 
 .header .gnb>ul>li>a {
-  font-size: 18px;
+  font-size: 18rem;
   font-weight: 500;
 }
 
@@ -34,13 +30,14 @@
 
 .header .h_right {
   display: flex;
-  gap: 16px;
+  gap: 16rem;
   align-items: center;
 }
 
 .header .h_right .btn_ham {
   display: none;
 }
+
 .header .h_right .btn_lang .ko {
   display: none;
 }
@@ -50,7 +47,7 @@
 }
 
 .header .h_right .heart span {
-  font-size: 30px;
+  font-size: 30rem;
 }
 
 .header .h_right .heart>strong {
@@ -58,23 +55,160 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  font-size: 14px;
+  font-size: 14rem;
 }
 
-/* 빙글빙글 */
-.circle {
+/* visual */
+
+.main_vi {
+  position: relative;
+}
+
+.main_vi .itm {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main_vi .itm01 {
+  background: url(../images/main_vi01.jpg) no-repeat right center/cover;
+  background-size: 115%;
+}
+
+.main_vi .itm02 {
+  background: url(../images/main_vi02.jpg) no-repeat center top/cover;
+  background-size: 110%;
+}
+
+.main_vi .itm03 {
+  background: url(../images/main_vi03.jpg) no-repeat left bottom/cover;
+  background-size: 110%;
+}
+
+.main_vi .slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  margin: 0 0 0 -585rem;
+}
+
+.main_vi .slogan>strong {
+  display: inline-block;
+  background: #6EBA34;
+  color: #fff;
+  padding: 10rem 40rem;
+  font-size: 20rem;
+  margin: 0 0 16rem 0;
+}
+
+.main_vi .slogan h2 {
+  width: 400rem;
+  font-size: 56rem;
+  font-weight: 100;
+  line-height: 65rem;
+}
+
+/* arrow, count */
+.main_vi .btn_left .arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 100rem;
+  margin: 0 0 0 -585rem;
+  max-height: 90rem;
+  height: 100%;
+}
+
+.main_vi .arrows>* {
+  cursor: pointer;
+  width: 40rem;
+  height: 40rem;
+  font-size: 20rem;
+  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37rem;
+  transition: 0.5s;
+}
+
+.main_vi .arrows .left {
+  position: absolute;
+  top: 0;
+}
+
+.main_vi .arrows .left:hover {
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 1);
+}
+.main_vi .arrows .right:hover {
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 1);
+}
+
+.main_vi .arrows .right {
+  position: absolute;
+  bottom: 0;
+}
+
+.main_vi .slide_num {
+  position: absolute;
+  left: 50%;
+  bottom: 100rem;
+  margin: 0 0 0 -520rem;
+  line-height: 30rem;
+  text-align: center;
+}
+
+.main_vi .slide_num>span {
+  display: block;
+  font-size: 24rem;
+}
+
+.main_vi .slide_num>strong {
+  display: block;
+  font-size: 24rem;
+}
+
+/* 빙글빙글 텍스트 */
+.main_vi .btn_right {
+  position: absolute;
+  left: 50%;
+  transform: translate(-100%, 0);
+  margin: 0 0 0 585rem;
+  bottom: 40rem;
+}
+
+.main_vi .btn_right>a span {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  width: 80rem;
+  height: 80rem;
+  text-align: center;
+  line-height: 80rem;
+  font-size: 34rem;
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+  transition: 1s;
+}
+
+.main_vi .btn_right:hover>a span {
+  background: rgba(255, 255, 255, 1);
+}
+
+.main_vi .circle {
   display: flex;
   position: relative;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #333;
+  width: 200rem;
+  height: 200rem;
+  border: 1px solid #888;
   border-radius: 50%;
-
-  margin: 0 0 0 100px;
 }
 
-.text {
+.main_vi .text {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -86,16 +220,18 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-.text span {
+.main_vi .text span {
   position: absolute;
   left: 50%;
   top: 2px;
-  font-size: 14px;
+  font-size: 14rem;
   font-weight: 200;
-  transform-origin: 0 97px;
+  transform-origin: 0 97rem;
+  user-select: none;
 }
