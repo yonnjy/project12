@@ -1,5 +1,6 @@
 $(function () {
     $('.main_content').fullpage({
+
         anchors: ['main_vi', 'main_coll', 'main_view'],
         navigation: false,
         css3: false,
@@ -33,7 +34,7 @@ $(function () {
 
     $('.main_slide').slick({
         arrows: false,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 4000,
         speed: 800,
         pauseOnHover: false,
@@ -55,5 +56,4 @@ $(function () {
     $('.main_vi .arrows .right').on('click', function () {
         $('.main_slide').slick('slickNext');
     });
-
 });
