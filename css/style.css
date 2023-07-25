@@ -8,10 +8,11 @@
   left: 0;
   right: 0;
   border-bottom: 1px solid #eee;
+  z-index: 999;
 }
 
 .header .h_wrap {
-  height: 100px;
+  height: 80px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -20,6 +21,11 @@
 .header .gnb>ul {
   display: flex;
   gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .header .gnb .sub {
@@ -54,4 +60,42 @@
   transform: translate(-50%, -50%);
 
   font-size: 14px;
+}
+
+/* 빙글빙글 */
+.circle {
+  display: flex;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #333;
+  border-radius: 50%;
+
+  margin: 0 0 0 100px;
+}
+
+.text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  animation: anim 15s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  top: 2px;
+  font-size: 14px;
+  font-weight: 200;
+  transform-origin: 0 97px;
 }
