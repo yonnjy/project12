@@ -9,6 +9,7 @@
   transition: 0.8s;
   opacity: 0;
 }
+
 .header.on {
   top: 0;
   opacity: 1;
@@ -37,8 +38,10 @@
 
 .header .h_right {
   display: flex;
+  justify-content: flex-end;
   gap: 16rem;
   align-items: center;
+  width: 185rem;
 }
 
 .header .h_right .btn_ham {
@@ -147,6 +150,7 @@
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 1);
 }
+
 .main_vi .arrows .right:hover {
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 1);
@@ -242,7 +246,356 @@
   user-select: none;
 }
 
-.main_coll .bigbg {
+/* collection */
+.main_coll {
+  position: relative;
+}
+
+.main_coll .tap_list {
+  display: flex;
+  gap: 30rem;
+  position: absolute;
+  top: 140rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1170rem;
+  justify-content: center;
+  z-index: 90;
+}
+
+.main_coll .tap_list>li {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18rem;
+  color: #ddd;
+}
+
+.main_coll .tap_list>li.on {
+  color: #333;
+}
+
+.main_coll .con {
+  position: relative;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(221, 221, 221, 0.1) 50%, rgb(255, 241, 210) 50%);
+}
+
+.main_coll .con01 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(245, 232, 223) 50%);
+}
+
+.main_coll .con02 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(182, 195, 209) 50%);
+}
+
+.main_coll .con03 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(217, 216, 216) 50%);
+}
+
+.main_coll .con04 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(250, 215, 205) 50%);
+}
+
+.main_coll .con05 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(240, 228, 211) 50%);
+}
+
+.main_coll .con06 {
+  background: linear-gradient(90deg, rgb(244, 244, 244) 50%, rgb(172, 185, 195) 50%);
+}
+
+.main_coll .tit_box {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+}
+
+.main_coll .tit_box h2 {
+  font-size: 200rem;
+  line-height: 160rem;
+  font-family: 'DM Serif Display';
+}
+
+.main_coll .tit_box span {
+  display: block;
+  font-size: 18rem;
+  margin: 0 0 20rem 0;
+  color: #888;
+}
+
+.main_coll .tit_box strong {
+  position: relative;
+  font-size: 32rem;
+  font-weight: 700;
+}
+
+.main_coll .tit_box strong::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100rem;
+  width: 160rem;
+  height: 2px;
+  background: #333;
+}
+
+.main_coll .txt_box {
+  position: absolute;
+  top: 35%;
+  right: 8%;
+}
+
+.main_coll .txt_box strong {
+  display: block;
+  position: relative;
+  font-size: 24rem;
+  font-weight: 600;
+  margin: 0 0 16rem 0;
+}
+
+.main_coll .txt_box strong::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -80rem;
+  width: 60rem;
+  height: 2px;
+  background: #333;
+}
+
+.main_coll .txt_box p {
+  width: 180rem;
+  line-height: 24rem;
+}
+
+.main_coll .btn_box {
+  position: absolute;
+  bottom: 35%;
+  right: 8%;
+  text-align: center;
+  width: 240rem;
+  height: 60rem;
+
+
+  border: 1px solid #666;
+}
+
+.main_coll .btn_box>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0 0 0;
+}
+
+.main_coll .btn_box strong {
+  display: block;
+  margin: 0 0 4rem 0;
+  font-size: 18rem;
+  font-weight: 600;
+}
+
+.main_coll .btn_box span {
+  font-size: 14rem;
+  font-weight: 300;
+}
+
+.main_coll .name_num {
+  text-align: center;
+}
+
+.main_coll .con .name_num ul {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  top: 120rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 1170rem;
+  width: 100%;
+  padding: 30rem 0;
+  z-index: 990;
+  background: #fff;
+}
+
+.main_coll .name_num>ul>li span {
+  padding: 0 0 0 30rem;
+  font-weight: 600;
+}
+
+.main_coll .name_num>ul>li::before {
+  content: "";
+  position: absolute;
+  left: 70rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 1px;
+  height: 12rem;
+  background: #ddd;
+}
+
+.main_coll .name_num .left {
+  position: absolute;
+  left: 30rem;
+}
+
+.main_coll .name_num .right {
+  position: absolute;
+  right: 30rem;
+}
+
+.main_coll .con .img_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 720rem;
+  width: 1170rem;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.main_coll .slick-dots {
+  position: absolute;
+  bottom: 60rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.main_coll .slick-dots>li {
+  display: inline-block;
+}
+
+.main_coll .slick-dots>li button {
+  font-size: 0;
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main_coll .slick-dots>li:hover button {
+  background: #666;
+}
+
+.main_coll .slick-dots>li~li button {
+  margin: 0 0 0 10rem;
+}
+
+.main_coll .slick-dots>li.slick-active button {
+  background: #666;
+}
+
+.main_coll .arrows {
+  position: absolute;
+  bottom: 80rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 220rem;
+  width: 100%;
+}
+
+.main_coll .arrows>* {
+  cursor: pointer;
+}
+
+.main_coll .arrows .left {
+  position: absolute;
+  left: 0;
+}
+
+.main_coll .arrows .right {
+  position: absolute;
+  right: 0;
+}
+
+
+/* footer */
+.footer {
+  background: #333;
+  padding: 40rem 0 20rem 0;
+}
+
+/* top */
+.footer .f_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 60rem 0;
+}
+
+.footer .f_top .logo img {
+  filter: invert();
+}
+
+.footer .f_top .to_top span {
+  padding: 10rem 30rem;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* bottom */
+.footer .f_bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 60rem 0;
+}
+
+.footer .f_bottom .f_nav>ul {
+  display: flex;
+  gap: 30rem;
+  text-align: right;
+}
+
+.footer .f_bottom .f_nav>ul>li>a {
+  position: relative;
+  display: block;
+  font-size: 16rem;
+  font-weight: 600;
+  margin: 0 0 16rem 0;
+}
+
+.footer .f_bottom .f_sub>li>a {
+  line-height: 22rem;
+}
+
+.footer .f_bottom .adss {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  line-height: 20rem;
+}
+
+.footer .f_bottom .adss>ul {
+  display: flex;
+  gap: 20rem;
+}
+.footer .f_bottom .adss>ul>li {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .f_bottom .adss .info {
+  margin: auto 0 0 auto;
+}
+
+.footer .f_bottom .adss .info>span {
+  font-weight: 400;
+}
+.footer .f_bottom .adss strong {
+  display: block;
+  font-size: 18rem;
+  font-weight: 600;
+  line-height: 16rem;
+  margin: 0 0 16rem 0;
+}
+.footer .f_bottom .adss span {
+  font-weight: 600;
+}
+
+.footer .copyright {
+  text-align: center;
+  font-weight: 200;
+  color: #888;  
 }
