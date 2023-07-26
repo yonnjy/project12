@@ -1,4 +1,59 @@
 $(function () {
+    const txt = document.querySelectorAll('.text p');
+    //360/배열.length 7.4
+
+    txt.forEach(it => {
+        it.innerHTML = it.innerText.split('').map(
+            (char, i) =>
+                `<span style="transform:rotate(${7.4 * i}deg)">${char}</span>`
+        ).join('');
+    })
+
+    // txt.innerHTML = txt.innerText.split('').map(
+    //     (char, i) =>
+    //         `<span style="transform:rotate(${i * 7.4}deg)">${char}</span>`
+    // ).join('');
+
+    // const C_TXT = document.querySelector('.case');
+    // const I_TXT = document.querySelector('.text');
+    // const TXT = 'Lorem^^*ipsumdolorsitamet';
+
+
+    // const TC = t => {
+    //     const n = t.length;
+    //     const r = [...t].map(it => `<span>${it}</span>`).join('');
+
+    //     I_TXT.innerHTML = r;
+    //     const SPAN = document.querySelectorAll('.text span');
+    //     //console.log(t, n, r, SPAN);
+    //     SPAN.forEach((it, idx) => {
+    //         it.style.cssText = `
+    //         position: absolute;
+    //         top:0;
+    //         left: 50%;
+    //         transform: translate(-50%,0) rotate(${360 / n * idx}deg);
+    //         transform-origin: center bottom;
+    //         height: 50%;
+    //         width: 20px;
+    //         font-size: 40px;
+    //         font-weight: bolder;
+    //         text-transform: uppercase;
+    //         color : #ddd;
+    //         `
+    //     });
+    // }
+
+    // TC(TXT);
+
+    // const RT = e => {
+    //     let SCT = window.scrollY;
+    //     //console.log(e, SCT);
+    //     C_TXT.style.cssText = `
+    //     transform: translate(-50%, -50%) rotate(${SCT / 5}deg);
+    //     `
+    // }
+    // window.addEventListener('scroll', RT);
+
     $('.main_content').fullpage({
 
         anchors: ['main_vi', 'main_coll', 'main_view'],
@@ -44,7 +99,6 @@ $(function () {
     $('.main_slide').on('init afterChange', function (e, s, c) {
         const current = $('.main_slide .slick-current');
 
-        current.addClass('on').siblings().removeClass('on');
         $('.main_vi .slide_num span').text("0" + (c ? (c + 1) : 1));
         $('.main_vi .slide_num strong').text("0" + (s.slideCount));
     });
@@ -56,4 +110,34 @@ $(function () {
     $('.main_vi .arrows .right').on('click', function () {
         $('.main_slide').slick('slickNext');
     });
+
+    $('.con_list').slick({
+        arrows: false,
+        dots: true,
+        fade: true,
+    });
+
+    
+    $('.con_list').on('init afterChange', function (e, s, c) {
+        $('.tap_list li').eq(c).addClass('on').siblings().removeClass('on');
+    });
+
+    $('.main_coll .arrows .left').on('click', function () {
+        $('.con_list').slick('slickPrev');
+    });
+
+    $('.main_coll .arrows .right').on('click', function () {
+        $('.con_list').slick('slickNext');
+    });
+
+
+    $('.main_coll .tap_list>li').on('click', function (e) {
+        e.preventDefault();
+
+        let idx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on');
+
+        $('.con_list').slick('slickGoTo', idx);
+    });
+
 });
