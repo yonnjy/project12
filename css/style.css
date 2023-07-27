@@ -387,7 +387,7 @@
 }
 
 .main_coll .btn_box:hover .case {
-  animation: flipInX 1s;
+  animation: flipInX 1.5s infinite;
 }
 
 .main_coll .btn_box strong {
@@ -448,10 +448,10 @@
 
 .main_coll .con .img_box {
   position: absolute;
-  top: 50%;
+  top: 150rem;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 720rem;
+  transform: translate(-50%, 0);
+  height: 660rem;
   width: 1170rem;
   overflow: hidden;
   z-index: -1;
@@ -615,51 +615,136 @@
   position: relative;
 }
 
+.main_view .arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 30rem;
+  transform: translate(-50%, 0);
+  z-index: 99;
+}
+
 .main_view .view_inner {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 1170rem;
-  width: 100%;
+  left: 0;
+  right: 0;
+  transform: translate(0, -50%);
 }
 
 .main_view .view_wrap {
   display: flex;
-  height: 700rem;
 }
 
 .main_view .view_wrap>* {
+  position: relative;
   flex: 1;
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 0 20rem;
+}
+
+.main_view .view_wrap>*.on {
+  flex: 100;
+  padding: 0 100rem;
 }
 
 .main_view .view {
   position: relative;
+  display: flex;
+  gap: 100rem;
+  align-items: center;
 }
 
 .main_view .view .img_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 20rem;
+  height: 70%;
+  opacity: 0;
+  flex: 3;
+}
+.main_view .view.on .img_box {
+  opacity: 1;
+}
+
+.main_view .view .img_box img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.main_view .view .txt_box {
+  opacity: 0;
+  flex: 1;
+}
+.main_view .view.on .txt_box {
+  opacity: 1;
+}
+
+.main_view .view.on .txt_box li {
+  margin: 0 0 28rem 0;
+}
+
+.main_view .view.on .txt_box .num {
+  display: block;
+  font-size: 60rem;
+  font-weight: 900;
+  margin: 0 0 20rem 0;
+}
+
+.main_view .view .txt_box strong {
+  display: block;
+  font-size: 24rem;
+  font-weight: 800;
+  margin: 0 0 8rem 0;
+}
+.main_view .view .txt_box span {
+  width: 350rem;
+  font-size: 18rem;
+  font-weight: 600;
+}
+
+.main_view .view .btn {
+  text-align: center;
+  width: 280rem;
+  height: 70rem;
+  margin: 20rem 0 0 0;
+  border: 1px solid #666;
+  border-radius: 50%;
+}
+.main_view .view .btn .case {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18rem;
+  font-weight: 700;
+  line-height: 65rem;
+}
+.main_view .view .btn:hover .case {
+  animation: flipInX 1.5s infinite;
 }
 
 .main_view .con01 {
-  background: url(../images/view_bg01.png)center center;
-  flex: 15;
+  background: url(../images/view_bg01.jpg)center center;
 }
 
 .main_view .con02 {
-  background: url(../images/view_bg02.png)center center;
-  flex: 1;
+  background: url(../images/view_bg02.jpg)center center;
 }
 .main_view .con03 {
-  background: url(../images/view_bg03.png)center center;
-  flex: 1;
+  background: url(../images/view_bg03.jpg)center center;
 }
 .main_view .con04 {
-  background: url(../images/view_itm04.png)center center;
-  flex: 1;
+  background: url(../images/view_bg04.jpg)center center;
+}
+.main_view .con05 {
+  background: url(../images/view_bg05.jpg)center center;
+}
+.main_view .con06 {
+  background: url(../images/view_bg06.jpg)center center;
+}
+.main_view .con07 {
+  background: url(../images/view_bg07.jpg)center center;
 }
 
 
@@ -681,7 +766,7 @@
   filter: invert();
 }
 
-.footer .f_top .to_top span {
+.footer .f_top .to_top a {
   padding: 10rem 30rem;
   border-radius: 50%;
   border: 1px solid #aaa;
@@ -689,7 +774,7 @@
   transition: 0.3s;
 }
 
-.footer .f_top .to_top span:hover {
+.footer .f_top .to_top a:hover {
   background: #aaa;
   color: #333;
 }
