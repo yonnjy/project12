@@ -1,4 +1,5 @@
 $(function () {
+
     const txt = document.querySelectorAll('.text p');
     //360/배열.length 7.4
 
@@ -54,8 +55,8 @@ $(function () {
     // }
     // window.addEventListener('scroll', RT);
 
+    
     $('.main_content').fullpage({
-
         anchors: ['main_vi', 'main_coll', 'main_view'],
         navigation: false,
         css3: false,
@@ -89,7 +90,7 @@ $(function () {
 
     $('.main_slide').slick({
         arrows: false,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 4000,
         speed: 800,
         pauseOnHover: false,
@@ -117,7 +118,7 @@ $(function () {
         fade: true,
     });
 
-    
+
     $('.con_list').on('init afterChange', function (e, s, c) {
         $('.tap_list li').eq(c).addClass('on').siblings().removeClass('on');
     });
