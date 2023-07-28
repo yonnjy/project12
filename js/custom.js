@@ -141,4 +141,8 @@ $(function () {
         $('.con_list').slick('slickGoTo', idx);
     });
 
+    $('.main_view .view_wrap>*').on('click', function (e) {
+        e.preventDefault();
+        $(this).addClass('on').siblings().removeClass('on');
+    })
 });
